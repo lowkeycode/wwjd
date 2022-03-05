@@ -34,10 +34,11 @@ export class MapService {
       const lon = restaurant.longitude;
       const marker = L.marker([lat, lon])
 
-      console.log(restaurant);
+      console.log(marker);
 
       marker.addTo(map);
     }
+    
   }
 
 }
