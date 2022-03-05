@@ -2,26 +2,18 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantsService {
-  // https://www.yelp.com/developers/documentation/v3/business_search
-
-  // Get (5000 per day)
-  mainUrl = 'https://api.yelp.com/v3/businesses/search?term=restaurants&location=calgary';
-
-  clientId = '1iFntpQryaxCWpLl1Y_DGQ';
-
-  apiKey = 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx';
-
-  topFive;
-
+  
 
   constructor(private http: HttpClient) { }
 
-
   // TODO A restaurant interface should be defined here for typed responses & typescript capabilities. (Is this usually done for API calls with large responses? Or do you get into pipes & maps?)
+
+  // TODO Revisit search/categories to get better search results - best results are by ethnic foods
   getRestaurants(search: string): Observable<any> {
     
     const httpOptions = {
