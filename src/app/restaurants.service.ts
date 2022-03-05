@@ -15,7 +15,7 @@ export class RestaurantsService {
 
   apiKey = 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx';
 
-  
+  topFive;
 
 
   constructor(private http: HttpClient) { }
@@ -28,7 +28,15 @@ export class RestaurantsService {
       })
     }
 
-    return this.http.get<any>('http://localhost:8080/api', httpOptions);
+    return this.http.get<{}>('http://localhost:8080/api', httpOptions);
   }
+
+  // * Sorts array by rating and gets first five with highest rating. This is not an accurate representation of rating especially compared with the amount of reviews
+  // TODO Improve filter logic
+
+  topFiveFilter(restaurantArray) {
+    return restaurantArray.sort((a, b) => b.rating - a.rating).slice(0, 5)
+  }
+
 
 }

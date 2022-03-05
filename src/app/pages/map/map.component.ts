@@ -9,6 +9,8 @@ import { RestaurantsService } from 'src/app/restaurants.service';
 })
 export class MapComponent implements OnInit {
 
+  topFive;
+
 
   constructor(private restaurantsService: RestaurantsService) { }
 
@@ -16,7 +18,12 @@ export class MapComponent implements OnInit {
   }
 
   searchForRestaurants(search: string) {
-    this.restaurantsService.getRestaurants(search).subscribe(result => console.log(result));
+    this.restaurantsService.getRestaurants(search).subscribe(result => {
+      console.log(result.businesses)
+      this.topFive = this.restaurantsService.topFiveFilter(result.businesses)
+      console.log(this.topFive)
+    });
   }
 
+  
 }
