@@ -6,7 +6,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RestaurantsService {
-
   // https://www.yelp.com/developers/documentation/v3/business_search
 
   // Get (5000 per day)
@@ -16,19 +15,20 @@ export class RestaurantsService {
 
   apiKey = 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx';
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Authorization': 'Bearer WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx'
-    })
-  }
+  
 
-  searchTerm: string;
 
   constructor(private http: HttpClient) { }
 
-  getRestaurants(): Observable<any> {
-    console.log('Trying to get');
-    return this.http.get<any>('http://localhost:8080/api');
+  getRestaurants(search: string): Observable<any> {
+    
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'search': `${search}`
+      })
+    }
+
+    return this.http.get<any>('http://localhost:8080/api', httpOptions);
   }
 
 }

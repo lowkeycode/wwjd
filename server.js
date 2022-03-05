@@ -9,9 +9,10 @@ app.use(cors({
 
 
 app.get('/api', function(req, res){ 
-  request('https://api.yelp.com/v3/businesses/search?term=restaurants&location=calgary', function (error, response, body) { 
+  const searchTerm = req.get('search');
+  console.log(req.get('search'))
+  request(`https://api.yelp.com/v3/businesses/search?term=restaurants&location=calgary&categories=${searchTerm}`, function (error, response, body) { 
     if (!error && response.statusCode === 200) { 
-      console.log(body); 
       res.send(body); 
     }
     if(error) {
