@@ -1,7 +1,8 @@
 <div class="map">
   <div class="map__left">
     <div class="map__left--search">
-      <input type="search" placeholder="Search restaurants...">
+      <input #restaurantInput type="search" placeholder="Search restaurants...">
+      <button (click)="restaurantInput.value = searchTerm; restaurantInput.value = ''">Go!</button>
       <ul>
         <li></li>
         <li></li>

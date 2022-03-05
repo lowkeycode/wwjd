@@ -52,3 +52,16 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 }
 
 html{box-sizing: border-box;font-size: 125%;font-family: var(--font-primary);}
+
+button {
+  border: 1px solid var(--color-grey-dark);
+  border-radius: 3px;
+  background: var(--color-grey-light);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
