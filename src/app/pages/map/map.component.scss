@@ -37,6 +37,17 @@
     &--dine {
       height: 85%; 
       border: 1px solid purple;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid red;
+        height: 100%;
+
+        & li {
+          border: 1px solid blue;
+        }
+      }
     }
   }
 
