@@ -15,6 +15,9 @@ import { FavListComponent } from './pages/map/fav-list/fav-list.component';
 import { FavItemComponent } from './pages/map/fav-item/fav-item.component';
 import { RestaurantDetailsComponent } from './pages/restaurant/restaurant-details/restaurant-details.component';
 
+import { RestaurantsService } from './restaurants.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,9 +35,10 @@ import { RestaurantDetailsComponent } from './pages/restaurant/restaurant-detail
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RestaurantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
