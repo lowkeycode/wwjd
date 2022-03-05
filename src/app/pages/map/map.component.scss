@@ -1,0 +1,50 @@
+.map {
+  border: 3px solid var(--color-grey-dark);
+  height: 85vh;
+  display: flex;
+
+  &__left {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid red;
+
+    &--search {
+      border: 1px solid green;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xs);
+      height: 15%;
+
+      & input::placeholder {
+        padding-left: 3px;
+      }
+
+      & ul {
+        list-style: none;
+      }
+    }
+
+    &--dine {
+      height: 85%; 
+      border: 1px solid purple;
+    }
+  }
+
+  &__right {
+    border: 1px solid blue;
+    width: 75%;
+
+    &--map-body {
+      height: 80%;
+      border: 1px solid green;
+    }
+
+    &--favs {
+      border: 1px solid purple;
+      height: 20%;
+    }
+  }
+}
