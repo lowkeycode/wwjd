@@ -1,5 +1,4 @@
 .map {
-  border: 3px solid var(--color-grey-dark);
   height: 85vh;
   display: flex;
 
@@ -38,14 +37,23 @@
       & ul {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        background-color: var(--color-grey-light);
+        justify-content: space-evenly;
+        background-color: var(--color-grey-med);
         height: 100%;
 
-        & li {
+        
+        app-dine-item {
           background-color: white;
-          border: 1px solid var(--color-grey-med)
+          border: 1px solid var(--color-grey-dark);
+          display: flex;
+          transition: all 0.3s;
         }
+
+        app-dine-item:hover {
+          cursor: pointer;
+          background-color: var(--color-grey-light);
+        }
+        
       }
     }
   }
@@ -66,9 +74,7 @@
   }
 }
 
-app-dine-item {
-  display: flex;
-}
+
 
 
 
