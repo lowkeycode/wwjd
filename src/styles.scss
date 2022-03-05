@@ -4,4 +4,64 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-*,*::before,*::after{margin: 0;padding: 0;box-sizing: inherit;}html{box-sizing: border-box;font-size: 125%;}
+*,*::before,*::after{margin: 0;padding: 0;box-sizing: inherit;}
+
+/* Global Styles */
+:root {
+  --color-grey-dark: #343434;
+  --color-grey-med: #757575;
+  --color-grey-light: #dfdfdf;
+
+  --font-primary: 'Roboto', Arial, sans-serif;
+
+  /* Minimum font-size 18px for accessibility */
+  /* Set base size to 20px or 125% */
+  /* Media queries allowed to use 119% (19px) an 112% (18px) */
+
+  /* Type Scale (Major Third)*/
+  /* 61.04px */
+  --fs-xxl: 3.052rem; 
+  /* 48.83px */
+  --fs-xl: 2.441rem;
+  /* 39.06px */
+  --fs-lrg: 1.953rem;
+  /* 31.25px */
+  --fs-med: 1.563rem;
+  /* 25px */
+  --fs-sml: 1..25rem;
+  /* 20px */
+  --fs-xs: 1rem;
+
+  /* Major Third on Spacing */
+  --space-xxl: 3.052rem;
+  --space-xl: 2.441rem;
+  --space-lrg: 1.953rem;
+  --space-med: 1.563rem;
+  --space-sml: 1.25rem;
+  --space-xs: 1rem;
+  --space-xxs: .5rem;
+
+  /* Box shadows */
+  --bs-primary:rgba(99, 99, 99, 0.7) 0px 2px 8px 0px;
+  --bs-secondary: rgba(117, 117, 117, 0.3) 0px 2px 2px 0px;
+
+  /* Border Radiuses */
+  --br-lrg: 7px;
+  --br-med: 5px;
+  --br-sml: 3px;
+}
+
+html{box-sizing: border-box;font-size: 125%;font-family: var(--font-primary);}
+
+button {
+  border: 1px solid var(--color-grey-dark);
+  border-radius: 3px;
+  background: var(--color-grey-light);
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
