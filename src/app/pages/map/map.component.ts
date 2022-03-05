@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { RestaurantsService } from 'src/app/restaurants.service';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  searchTerm: string = '';
 
-  constructor() { }
+  constructor(private restaurantsService: RestaurantsService) { }
 
   ngOnInit(): void {
+  }
+
+  searchForRestaurants(search: string) {
+    this.restaurantsService.getRestaurants().subscribe(result => console.log(result));
   }
 
 }
