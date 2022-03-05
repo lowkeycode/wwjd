@@ -6,9 +6,9 @@
       
     </div>
     <div class="map__left--dine">
-      <ul *ngIf="this.topFive">
+      <ul *ngIf="topFive">
         <li *ngFor="let restaurant of topFive">
-          {{ restaurant.name }}
+          <app-dine-item [restaurant]="restaurant"></app-dine-item>
         </li>
       </ul>
     </div>
