@@ -10,12 +10,12 @@ import { SearchComponent } from './UI/search/search.component';
 import { HomeBtnComponent } from './UI/home-btn/home-btn.component';
 import { DineListComponent } from './pages/map/dine-list/dine-list.component';
 import { DineItemComponent } from './pages/map/dine-item/dine-item.component';
-import { MapBodyComponent } from './pages/map/map-body/map-body.component';
 import { FavListComponent } from './pages/map/fav-list/fav-list.component';
 import { FavItemComponent } from './pages/map/fav-item/fav-item.component';
 import { RestaurantDetailsComponent } from './pages/restaurant/restaurant-details/restaurant-details.component';
 
 import { RestaurantsService } from './restaurants.service';
+import { MapService } from './map.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -28,7 +28,6 @@ import { HttpClientModule } from '@angular/common/http';
     HomeBtnComponent,
     DineListComponent,
     DineItemComponent,
-    MapBodyComponent,
     FavListComponent,
     FavItemComponent,
     RestaurantDetailsComponent
@@ -38,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [RestaurantsService],
+  providers: [RestaurantsService, MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

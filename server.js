@@ -7,6 +7,13 @@ app.use(cors({
   origin: 'http://localhost:4200'
 }))
 
+// https://www.yelp.com/developers/documentation/v3/business_search
+
+  // Get (5000 per day)
+  // clientId = '1iFntpQryaxCWpLl1Y_DGQ';
+
+  // apiKey = 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx';
+
 
 app.get('/api', function(req, res){ 
   const searchTerm = req.get('search');
