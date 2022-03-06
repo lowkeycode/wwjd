@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 import { RestaurantsService } from 'src/app/restaurants.service';
 import { MapService } from 'src/app/map.service';
+import { Restaurant } from 'src/app/models/restaurant.model';
 
 import * as L from 'leaflet';
 
@@ -27,7 +28,7 @@ L.Marker.prototype.options.icon = iconDefault;
 })
 export class MapComponent implements OnInit, AfterViewInit {
 
-  topFive;
+  topFive: Restaurant[];
 
   private map;
 
@@ -54,9 +55,8 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   searchForRestaurants(search: string) {
     this.restaurantsService.getRestaurants(search).subscribe(result => {
-      console.log(result.businesses)
+      console.log(result)
       this.topFive = this.restaurantsService.topFiveFilter(result.businesses)
-      console.log(this.topFive)
       
       this.mapService.getTopFiveCoords(this.topFive);
       this.mapService.renderMarkerAtCoords(this.map);
