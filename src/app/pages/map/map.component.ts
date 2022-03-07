@@ -29,9 +29,11 @@ L.Marker.prototype.options.icon = iconDefault;
 export class MapComponent implements OnInit, AfterViewInit {
 
   topFive: Restaurant[];
+  error: null;
 
   private map;
 
+  // TODO Error handle the map - dig into leaflet/mapbox
   private initMap(): void {
     this.map = L.map('map').setView([51.0447, -114.0719], 11)
 
@@ -60,6 +62,15 @@ export class MapComponent implements OnInit, AfterViewInit {
       
       this.mapService.getTopFiveCoords(this.topFive);
       this.mapService.renderMarkerAtCoords(this.map);
+    },
+    error => {
+      this.error = error;
+      const errTimeout = setTimeout(() => {
+        console.log('clearing error');
+        this.error = null;
+        console.log(this.error);
+        clearTimeout(errTimeout);
+      }, 5000);
     });
   }
 
