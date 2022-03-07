@@ -18,6 +18,7 @@ export class RestaurantDetailsComponent implements OnInit {
   faHeartOutline = faHeartOut;
   restaurantId: string;
   restaurantDetails;
+  restaurantPhoto;
   error: null;
 
   constructor( private route: ActivatedRoute, private restaurantsService: RestaurantsService) { }
@@ -27,6 +28,7 @@ export class RestaurantDetailsComponent implements OnInit {
 
     this.restaurantsService.getRestaurantDetails(this.restaurantId).subscribe(res => {
       this.restaurantDetails = {...res};
+      this.restaurantPhoto = res.image_url;
       console.log(res);
     },
     // TODO Error message not showing. 
