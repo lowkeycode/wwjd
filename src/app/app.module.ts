@@ -17,6 +17,7 @@ import { RestaurantDetailsComponent } from './pages/restaurant/restaurant-detail
 import { RestaurantsService } from './restaurants.service';
 import { MapService } from './map.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorComponent } from './UI/error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     DineItemComponent,
     FavListComponent,
     FavItemComponent,
-    RestaurantDetailsComponent
+    RestaurantDetailsComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
