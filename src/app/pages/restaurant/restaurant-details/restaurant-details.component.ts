@@ -18,6 +18,7 @@ export class RestaurantDetailsComponent implements OnInit {
   faHeartOutline = faHeartOut;
   restaurantId: string;
   restaurantDetails;
+  error: null;
 
   constructor( private route: ActivatedRoute, private restaurantsService: RestaurantsService) { }
 
@@ -26,6 +27,16 @@ export class RestaurantDetailsComponent implements OnInit {
 
     this.restaurantsService.getRestaurantDetails(this.restaurantId).subscribe(res => {
       this.restaurantDetails = {...res};
+      console.log(res);
+    },
+    // TODO Error message not showing. 
+    error => {
+      this.error = error;
+      console.log(this.error);
+      const errTimeout = setTimeout(() => {
+        this.error = null;
+        clearTimeout(errTimeout);
+      }, 5000);
     })
   }
 

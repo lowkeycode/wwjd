@@ -1,18 +1,20 @@
-.map-body {
-  display: block;
-  height: 10rem;
-  background-color: var(--color-grey-med);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-  position: relative;
-}
 
-#map {
-  height: 100%;
-}
+
 
 .details {
   height: 100%;
+  background: linear-gradient(173deg, var(--color-grey-light), var(--color-white-pure) 63%, var(--color-grey-med));
+
+  &__photo {
+    height: 12rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    position: relative;
+  
+    background: url(https://s3-media2.fl.yelpcdn.com/bphoto/CPc91bGzKBe95aM5edjhhQ/o.jpg);
+    background-size: cover;
+    background-position: left center;
+  }
 
   &__name {
     position: absolute;
@@ -21,10 +23,12 @@
     width: 25rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: var(--color-white-pure);
+    font-size: 1.5rem;
+    text-shadow: 1px 2px 2px  rgba(0, 0, 0, 0.6);
   }
 
   &__content {
-    border: 1px solid red;
     height: 100%;
     position: relative;
     display: flex;
@@ -33,9 +37,13 @@
 
     & > *:not(:nth-of-type(1)) {
       width: 90%;
-      border: 1px solid red;
       text-align: center;
       margin-bottom: 25px;
+      font-size: 1.2rem;
+      background: var(--color-green-light);
+      border: 1px solid var(--color-grey-dark);
+      color: var(--color-grey-dark);
+      border-radius: 4px;
     }
 
     &--favorite {
@@ -53,7 +61,7 @@
     }
 
     &--photos {
-      height: 8rem;
+      height: 6rem;
     }
   }
 }
