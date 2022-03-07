@@ -13,9 +13,6 @@ export class RestaurantsService {
   
 
   constructor(private http: HttpClient) { }
-
-  // TODO A restaurant interface should be defined here for typed responses & typescript capabilities. (Is this usually done for API calls with large responses? Or do you get into pipes & maps?)
-
   // TODO Revisit search/categories to get better search results - best results are by ethnic foods
   getRestaurants(search: string): Observable<RestaurantSearch> {
     
