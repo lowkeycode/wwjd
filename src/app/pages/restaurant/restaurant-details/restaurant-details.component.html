@@ -24,9 +24,11 @@
 
     <!-- <p *ngIf="error">Error</p> -->
 
-    <!-- <div class="details__content--photos">
-      photo component w/ *ngFor
-    </div> -->
+    <div class="details__content--photos">
+      <div *ngFor="let photo of restaurantDetails.photos" class="photo-cont">
+        <img src="{{photo}}" alt="">
+      </div>
+    </div>
 
   </div>
 </div>
