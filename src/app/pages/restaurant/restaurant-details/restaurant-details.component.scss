@@ -1,0 +1,58 @@
+.map-body {
+  display: block;
+  height: 10rem;
+  background-color: var(--color-grey-med);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+  position: relative;
+}
+
+#map {
+  height: 100%;
+}
+
+.details {
+  height: 100%;
+
+  &__name {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    width: 25rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__content {
+    border: 1px solid red;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > *:not(:nth-of-type(1)) {
+      width: 90%;
+      border: 1px solid red;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    &--favorite {
+      position: absolute;
+      top: -2.8rem;
+      right: 2rem;
+      text-align: center;
+    }
+
+    &--rate-review {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 12px;
+    }
+
+    &--photos {
+      height: 5.5rem;
+    }
+  }
+}
