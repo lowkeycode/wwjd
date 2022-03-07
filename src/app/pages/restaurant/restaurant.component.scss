@@ -1,6 +1,6 @@
 .restaurant {
   height: 85vh;
-  background: radial-gradient(circle, var(--color-grey-dark), var(--color-grey-med) 600px);
+  background: radial-gradient(circle, var(--color-grey-med), var(--color-grey-light) 600px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@
 app-restaurant-details {
   height: 85%;
   width: 60%;
-  background-color: var(--color-grey-light);
+  background-color: var(--color-white-off);
   border-radius: 8px;
   border: 2px solid var(--color-grey-dark);
   overflow: hidden;
