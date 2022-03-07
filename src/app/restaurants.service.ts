@@ -32,5 +32,13 @@ export class RestaurantsService {
     return restaurantArray.sort((a, b) => b.rating - a.rating).slice(0, 5)
   }
 
+  getRestaurantDetails(id: string): Observable<any> {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'id': `${id}`
+      })
+    }
 
+    return this.http.get<any>('http://localhost:8080/api/restaurant', httpOptions);
+  }
 }

@@ -5,7 +5,7 @@
   justify-content: center;
   border-bottom: 2px solid var(--color-grey-dark);
   height: 15vh;
-  background-color: var(--color-grey-light);
+  background-color: var(--color-white-off);
   position: relative;
 
   &__heading {
@@ -17,4 +17,10 @@
   &__copy {
     text-transform: uppercase;
   }
+}
+
+app-home-btn {
+  position: absolute;
+  top: var(--space-sml);
+  right: var(--space-med);
 }

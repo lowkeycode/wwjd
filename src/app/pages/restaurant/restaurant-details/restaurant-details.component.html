@@ -1,1 +1,32 @@
-<p>restaurant-details works!</p>
+<div class="details">
+  <div class="details__photo">
+    <h3 class="details__name">{{ restaurantDetails.name }}</h3>
+  </div>
+
+  <div class="details__content">
+    <div class="details__content--favorite">
+      <fa-icon (click)="toggleFavorite()" [icon]="isFavorite ? faHeartFull : faHeartOutline"></fa-icon>
+      <p>{{isFavorite ? 'Remove' : 'Add'}} Favorite</p>
+    </div>
+
+    <div class="details__content--rate-review">
+      <p>Rating: <span>{{ restaurantDetails.rating }}</span>/5</p>
+      <p>Reviews: {{ restaurantDetails.review_count }}</p>
+    </div>
+
+    <div class="details__content--phone">
+      <p>{{ restaurantDetails.display_phone }}</p>
+    </div>
+
+    <div class="details__content--address">
+      <p>{{ restaurantDetails.location.address1 }}</p>
+    </div>
+
+    <!-- <p *ngIf="error">Error</p> -->
+
+    <!-- <div class="details__content--photos">
+      photo component w/ *ngFor
+    </div> -->
+
+  </div>
+</div>
