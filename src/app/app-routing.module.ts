@@ -5,7 +5,7 @@ import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { RestaurantDetailsComponent } from './pages/restaurant/restaurant-details/restaurant-details.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/restaurant/BRKHGi3PGMgSBc2gHW_dNQ', pathMatch: 'full'},
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'home', component: MapComponent },
   { path: 'restaurant/:id', component: RestaurantComponent }
 ];

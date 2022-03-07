@@ -29,6 +29,20 @@ app.get('/api', function(req, res){
    .auth(null, null, true, 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx');
 });
 
+app.get('/api/restaurant', function(req, res){ 
+  const id = req.get('id');
+  console.log(req.get('id'))
+  request(`https://api.yelp.com/v3/businesses/${id}`, function (error, response, body) { 
+    if (!error && response.statusCode === 200) { 
+      res.send(body); 
+    }
+    if(error) {
+      console.log(error);
+    } 
+   })
+   .auth(null, null, true, 'WVpTr5z0iyGLH-7mkFeZDwHaM1FHDhd1dXR1ZOCgoxRU5dbmrNHz0zQP0SIDMfwdsz5qN1mOuLAykBvncTOp1xSI4n1waEloijfmMUcCFO_3rIxBBDtuGKA0JJIiYnYx');
+});
+
 
 
 app.listen(8080);

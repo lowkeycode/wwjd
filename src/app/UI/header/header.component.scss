@@ -18,3 +18,9 @@
     text-transform: uppercase;
   }
 }
+
+app-home-btn {
+  position: absolute;
+  top: var(--space-sml);
+  right: var(--space-med);
+}

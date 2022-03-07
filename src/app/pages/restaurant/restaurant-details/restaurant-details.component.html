@@ -1,7 +1,7 @@
 <div class="details">
   <div class="map-body">
     <div id="map"></div>
-    <h3 class="details__name">Restaurant Name Goes Here And If its long it will wrap</h3>
+    <h3 class="details__name">{{ restaurantDetails.name }}</h3>
   </div>
   <div class="details__content">
     <div class="details__content--favorite">
@@ -10,17 +10,14 @@
     </div>
 
     <div class="details__content--rate-review">
-      <p>Rating: <span>4.5</span>/5</p>
-      <p>Reviews: 1908</p>
-    </div>
-    <div class="details__content--desc">
-      <p>American (New), French, Wine Bar</p>
+      <p>Rating: <span>{{ restaurantDetails.rating }}</span>/5</p>
+      <p>Reviews: {{ restaurantDetails.review_count }}</p>
     </div>
     <div class="details__content--phone">
-      <p>403-555-5555</p>
+      <p>{{ restaurantDetails.display_phone }}</p>
     </div>
     <div class="details__content--address">
-      <p>1234 fake street NW</p>
+      <p>{{ restaurantDetails.location.display_address }}</p>
     </div>
     <div class="details__content--photos">
       photo component w/ *ngFor
