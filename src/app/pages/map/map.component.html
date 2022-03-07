@@ -22,3 +22,4 @@
     </div>    
   </div>
 </div>
+<app-error *ngIf="error" [message]="error.statusText + '. Please try again!'" [status]="error.status"></app-error>
