@@ -9,4 +9,5 @@ npm start
 To run proxy server for API requests to mitigate cors and start Angular front-end
 
 
-![App Image](https://github.com/lowkeycode/wwjd/blob/master/wwjd.png)
+![Home Page](https://github.com/lowkeycode/wwjd/blob/master/wwjd.png)
+![Restaurant Page](https://github.com/lowkeycode/wwjd/blob/master/wwjd2.png)
