@@ -73,3 +73,12 @@ fa-icon {
   font-size: 25px;
   color: var(--color-red-light);
 }
+
+fa-icon + p {
+  opacity: 0;
+  transition: all .3s;
+}
+
+fa-icon:hover + p {
+  opacity: 1;
+}
