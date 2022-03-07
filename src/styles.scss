@@ -72,6 +72,13 @@ button:hover {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: var(--color-grey-dark);
+}
 
 .leaflet-popup-content-wrapper {
   border-radius: 5px ;

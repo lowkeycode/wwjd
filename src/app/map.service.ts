@@ -77,7 +77,10 @@ export class MapService {
     for(const restaurant of this.topFiveCoordsArray) {
       const lat = restaurant.coords.latitude;
       const lon = restaurant.coords.longitude;
-      const marker = L.marker([lat, lon])
+      const marker = L.marker([lat, lon],{
+        riseOnHover: true,
+        riseOffset: 250
+      })
 
       // console.log(marker);
 

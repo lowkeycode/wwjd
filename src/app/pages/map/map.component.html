@@ -11,7 +11,9 @@
     <div class="map__left--dine">
       <ul *ngIf="topFive">
         <li *ngFor="let restaurant of topFive">
-          <app-dine-item [restaurant]="restaurant"></app-dine-item>
+          <a routerLink="/restaurant/{{ restaurant.id }}">
+            <app-dine-item [restaurant]="restaurant"></app-dine-item>
+          </a>
         </li>
       </ul>
     </div>

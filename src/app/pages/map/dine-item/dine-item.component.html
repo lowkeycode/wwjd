@@ -1,10 +1,10 @@
-  <div class="item__image">
-    <img src="{{ restaurant.image_url }}" alt="">
+<div class="item__image">
+  <img src="{{ restaurant.image_url }}" alt="">
+</div>
+<div class="item__overview">
+  <h3 class="item__overview--name">{{ restaurant.name }}</h3>
+  <div class="item__overview--info">
+    <p>Rating: {{restaurant.rating}}/5</p>
+    <p>Reviews: {{ restaurant.review_count }}</p>
   </div>
-  <div class="item__overview">
-    <h3 class="item__overview--name">{{ restaurant.name }}</h3>
-    <div class="item__overview--info">
-      <p>Rating: {{restaurant.rating}}/5</p>
-      <p>Reviews: {{ restaurant.review_count }}</p>
-    </div>
-  </div>
+</div>
