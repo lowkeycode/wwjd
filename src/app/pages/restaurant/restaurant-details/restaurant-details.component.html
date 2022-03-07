@@ -5,8 +5,8 @@
   </div>
   <div class="details__content">
     <div class="details__content--favorite">
-      <p><3</p>
-      <p>Add/Remove Favorite</p>
+      <fa-icon (click)="toggleFavorite()" [icon]="isFavorite ? faHeartFull : faHeartOutline"></fa-icon>
+      <p>{{isFavorite ? 'Remove' : 'Add'}} Favorite</p>
     </div>
 
     <div class="details__content--rate-review">

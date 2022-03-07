@@ -16,6 +16,7 @@ import { RestaurantsService } from './restaurants.service';
 import { MapService } from './map.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorComponent } from './UI/error/error.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ErrorComponent } from './UI/error/error.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [RestaurantsService, MapService],
   bootstrap: [AppComponent]
