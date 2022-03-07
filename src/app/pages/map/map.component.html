@@ -1,10 +1,13 @@
 <div class="map">
   <div class="map__left">
+    <!-- Search -->
     <div class="map__left--search">
       <input #restaurantInput type="search" placeholder="Search ethnic foods...">
       <button (click)="searchForRestaurants(restaurantInput.value); restaurantInput.value = ''">Go!</button>
       
     </div>
+
+    <!-- Dine -->
     <div class="map__left--dine">
       <ul *ngIf="topFive">
         <li *ngFor="let restaurant of topFive">
@@ -12,14 +15,19 @@
         </li>
       </ul>
     </div>
+
   </div>
+
   <div class="map__right">
+    <!-- Map -->
     <div class="map-body">
       <div id="map"></div>
     </div>
+    <!-- Favs -->
     <div class="map__right--favs">
 
     </div>    
   </div>
 </div>
+<!-- Error -->
 <app-error *ngIf="error" [message]="error.statusText + '. Please try again!'" [status]="error.status"></app-error>

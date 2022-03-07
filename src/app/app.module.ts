@@ -6,9 +6,7 @@ import { AppComponent } from './app.component';
 import { MapComponent } from './pages/map/map.component';
 import { RestaurantComponent } from './pages/restaurant/restaurant.component';
 import { HeaderComponent } from './UI/header/header.component';
-import { SearchComponent } from './UI/search/search.component';
 import { HomeBtnComponent } from './UI/home-btn/home-btn.component';
-import { DineListComponent } from './pages/map/dine-list/dine-list.component';
 import { DineItemComponent } from './pages/map/dine-item/dine-item.component';
 import { FavListComponent } from './pages/map/fav-list/fav-list.component';
 import { FavItemComponent } from './pages/map/fav-item/fav-item.component';
@@ -25,9 +23,7 @@ import { ErrorComponent } from './UI/error/error.component';
     MapComponent,
     RestaurantComponent,
     HeaderComponent,
-    SearchComponent,
     HomeBtnComponent,
-    DineListComponent,
     DineItemComponent,
     FavListComponent,
     FavItemComponent,
