@@ -71,3 +71,21 @@ button:hover {
   opacity: 0.8;
   cursor: pointer;
 }
+
+
+.leaflet-popup-content-wrapper {
+  border-radius: 5px ;
+  background-color: var(--color-grey-dark);
+  color: white;
+  padding: 10px;
+}
+
+.leaflet-popup-content {
+  text-align: center;
+  font-size: 12px;
+  margin: 5px;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--color-grey-dark);
+}

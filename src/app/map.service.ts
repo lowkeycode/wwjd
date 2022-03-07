@@ -81,7 +81,17 @@ export class MapService {
 
       // console.log(marker);
 
-      marker.addTo(map);
+      marker
+      .addTo(map)
+      .bindPopup(L.popup({
+        maxWidth: 200,
+        minWidth: 100,
+        autoClose: false,
+        closeOnClick: false,
+        className: 'map-pop-up'
+      }))
+      .setPopupContent(restaurant.name)
+      .openPopup();
     }
     
   }
